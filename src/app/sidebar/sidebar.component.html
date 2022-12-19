@@ -1,0 +1,51 @@
+<mat-sidenav-container class="sidebar-container" >
+
+  <mat-sidenav #sidenav  mode="over" [(opened)]="opened"
+               (opened)="events.push('open!')"
+               (closed)="events.push('close!')"
+               class="sideNav">
+    <div class="sideNavContent">
+
+
+      <button class="closeButton" (click)="sidenav.toggle()">
+        X
+      </button>
+      <img
+        src="https://static.gostynin.info/site/assets/files/187588/id-ozgfs-gostynin-dokladnie-9814-06.750x0.jpg" class="logo" alt="logo" style="height: 200px;width: 200px;border-radius: 50%;">
+
+      <ul class="navLinkWrapper">
+        <li><a >Home</a></li>
+        <li><a >About</a></li>
+        <li><a >Contact</a></li>
+        <li><a >Home 2</a></li>
+        <li><a >About 2</a></li>
+        <li><a >Contact 2</a></li>
+      </ul>
+
+
+    </div>
+
+  </mat-sidenav>
+
+  <mat-sidenav-content  class="sidebarContent">
+
+    <div class="contentWrapper">
+      <mat-toolbar class="mobileMenu" >
+        <mat-toolbar-row>
+          <button class="example-icon" (click)="sidenav.toggle()"
+                  aria-label="Example icon-button with menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+          <span class="menuSpacer"></span>
+          <span>Forminator</span>
+        </mat-toolbar-row>
+      </mat-toolbar>
+      <div class="FORM">HIER KOMMEN DIE FORM INHALTE</div>
+      <app-footer></app-footer>
+    </div>
+
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+

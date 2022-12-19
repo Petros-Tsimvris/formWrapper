@@ -1,0 +1,81 @@
+.sidebar-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+}
+.sideNav{
+  width: 30vw;
+  height: 100vh;
+  background-color: bisque;
+}
+.sideNavContent{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.closeButton{
+  color:red;
+  background-color: transparent;
+  border:none;
+  border-radius: 50%;
+  position: absolute;
+  top:25px;
+  right: 25px;
+  font-size: 1.5rem;
+}
+.menuSpacer {
+  flex: 1 1 auto;
+}
+.contentWrapper{
+  height: 100vh;
+  width: 100vw;
+  background-color:floralwhite;
+  position: absolute;
+  left:0;
+  top:0;
+  z-index: 2
+}
+.sidebarContent{
+  position: absolute;
+  top:0;
+  right: 0;
+  width: 100vw !important;
+  background-color: darkslategrey;
+}
+.navLinkWrapper{
+  margin:20px 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  list-style: none;
+  width: 100%;
+  a{
+    color: royalblue;
+    cursor: pointer;
+  }
+}
+.mobileMenu{
+  background-color: royalblue;
+  color: bisque;
+  button{
+    color:bisque;
+    background-color: transparent;
+    border: none;
+  }
+}
+@media screen and (max-width: 768px){
+  .sideNav{
+    width: 50vw;
+  }
+}
+
+
