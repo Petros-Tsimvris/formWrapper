@@ -66,6 +66,7 @@
 .mobileMenu{
   background-color: royalblue;
   color: bisque;
+  display: none;
   button{
     color:bisque;
     background-color: transparent;
@@ -75,6 +76,12 @@
 @media screen and (max-width: 768px){
   .sideNav{
     width: 50vw;
+  }
+  .mobileMenu{
+    display: block;
+  }
+  .openNaviButton{
+    display: none;
   }
 }
 

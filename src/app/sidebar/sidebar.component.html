@@ -1,6 +1,6 @@
 <mat-sidenav-container class="sidebar-container" >
 
-  <mat-sidenav #sidenav  mode="over" [(opened)]="opened"
+  <mat-sidenav #sidenav  mode="push" [(opened)]="opened"
                (opened)="events.push('open!')"
                (closed)="events.push('close!')"
                class="sideNav">
@@ -30,17 +30,26 @@
   <mat-sidenav-content  class="sidebarContent">
 
     <div class="contentWrapper">
+      <button class="openNaviButton" (click)="sidenav.toggle()"
+              aria-label="Example icon-button with menu icon">
+        <i class="mdi mdi-menu"></i>
+      </button>
+
       <mat-toolbar class="mobileMenu" >
         <mat-toolbar-row>
           <button class="example-icon" (click)="sidenav.toggle()"
                   aria-label="Example icon-button with menu icon">
-            <mat-icon>menu</mat-icon>
+
+            <i class="mdi mdi-menu"></i>
           </button>
           <span class="menuSpacer"></span>
           <span>Forminator</span>
         </mat-toolbar-row>
       </mat-toolbar>
-      <div class="FORM">HIER KOMMEN DIE FORM INHALTE</div>
+      <div class="FORM">HIER KOMMEN DIE FORM INHALTE
+        <span class="mdi mdi-account-network-off-outline"></span>
+
+      </div>
       <app-footer></app-footer>
     </div>
 
